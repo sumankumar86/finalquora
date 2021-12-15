@@ -1,0 +1,107 @@
+{% extends 'core/siteBase.html' %}
+{% load static %}
+
+{% block card%}
+
+<div class="card">
+    <div class="card-header p-2">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="nav nav-pills">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'studentprofile' %}"><i class="fas fa-question-circle" style="color:rgb(0, 255, 191)"></i>Question</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addquestion' %}"><i class="fas fa-comment-medical" style="color:rgb(0, 255, 191)" ></i>Add Question</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'addcategory' %}"><i class="far fa-plus-square" style="color:rgb(0, 255, 191)"></i> Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'editprofile' %}"><i class="fas fa-user-edit" style="color:rgb(0, 255, 191)"></i>Edit Profile</a>
+                </li>
+            </ul>
+          </nav>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">New Category</h3>
+
+                    </div>
+                    <div class="card-body p-4">
+                    <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group row">
+                            <label for="inputName" class="col-sm-2 col-form-label">Category
+                                name</label>
+                            <div class="col-sm-10">
+                                {{CategoryForm.name}}
+                                <!-- <input type="email" class="form-control" id="inputName"
+                                    placeholder="Write the Category Name Which you want to add?"> -->
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <div class="offset-sm-5 col-sm-10">
+                                <button type="submit"
+                                    class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Category</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool"
+                                data-card-widget="collapse" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-striped projects">
+                            <thead>
+                                <tr>
+                    
+                                    <th>Name</th>
+                                    <th>Date</th> 
+                                    <th>Status</th>
+                                    <th>Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for i in categorydata %}
+                                <tr>
+                                    <td>{{i.name}}</td>
+                                    <td><span>{{i.categorytime}}</span></td>
+                                    <td>
+                                        {% if i.is_approve %}
+                                        <span class="badge bg-success">Approve</span>
+                                        {% elif i.is_reject %}
+                                        <span class="badge bg-danger">Reject</span>
+                                       
+                                        {% else %}
+                                        <span class="badge bg-warning">Pending</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {{i.remarks}}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+       
+
+
+    </div>
+    <!-- /.card -->
+</div>
+{% endblock card%}

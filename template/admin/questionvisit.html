@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quora | CDC </title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+  <!-- summernote -->
+  <link rel="stylesheet" href="../../../plugins/summernote/summernote-bs4.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="login.html">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Log Out</span>
+          </a>
+        </li>
+        <!-- Messages Dropdown Menu -->
+        <!-- <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-comments"></i>
+        <span class="badge badge-danger navbar-badge">3</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <a href="#" class="dropdown-item"> -->
+        <!-- Message Start -->
+        <!-- <div class="media">
+            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Brad Diesel
+                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">Call me whenever you can...</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div> -->
+        <!-- Message End -->
+        <!-- </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item"> -->
+        <!-- Message Start -->
+        <!-- <div class="media">
+            <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                John Pierce
+                <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">I got your message bro</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div> -->
+        <!-- Message End -->
+        <!-- </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item"> -->
+        <!-- Message Start -->
+        <!-- <div class="media">
+            <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Nora Silvester
+                <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">The subject goes here</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div> -->
+        <!-- Message End -->
+        <!-- </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+      </div>
+    </li>  -->
+        <!-- Notifications Dropdown Menu -->
+        <!-- <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-bell"></i>
+        <span class="badge badge-warning navbar-badge">15</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <span class="dropdown-item dropdown-header">15 Notifications</span>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-envelope mr-2"></i> 4 new messages
+          <span class="float-right text-muted text-sm">3 mins</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-users mr-2"></i> 8 friend requests
+          <span class="float-right text-muted text-sm">12 hours</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-file mr-2"></i> 3 new reports
+          <span class="float-right text-muted text-sm">2 days</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+      </div>
+    </li> -->
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="../../../dist/img/quoralogo.png" alt="Quora Logo" class="brand-image img-circle elevation-3"
+          style="opacity: 0.8" />
+        <span class="brand-text font-weight-light">Quora</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search" />
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="cdc.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+
+                </p>
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a href="cdcactivity.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Activity
+
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Question Category
+                  <i class="fas fa-angle-left right"></i>
+
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-car-battery"></i>
+                    <p>Circuit Theory</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="visit_category.html" class="nav-link">
+                    <i class="fas fa-wave-square"></i>
+                    <p>Signal & System</p>
+                  </a>
+                </li>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-cog"></i>
+                <p>Electric Machine</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bolt"></i>
+                <p>Measurement</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-plug"></i>
+                <p>Control System</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-lightbulb"></i>
+                <p>Power System</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-charging-station"></i>
+                <p>Power Electronics</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bolt"></i>
+                <p>Electric Drive</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-solar-panel"></i>
+                <p>Renewable Energy</p>
+              </a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-bolt"></i>
+                <p>HVDC Transmission</p>
+              </a>
+            </li>
+          </ul>
+          </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-left">
+
+              </ol>
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+
+
+
+              <!-- /.card -->
+            </div>
+
+            <div class="card-body">
+
+              <!-- Post -->
+              <div class="post">
+                <div class="user-block">
+                  <img class="img-circle img-bordered-sm" src="../../../dist/img/user1-128x128.jpg" alt="user image">
+                  <span class="username">
+                    <a href="#">Jonathan Burke Jr.</a>
+
+                  </span>
+                  <span class="description">Shared publicly - 7:30 PM today</span>
+                </div>
+                <!-- /.user-block -->
+                <p>
+                  Lorem ipsum represents a long-held tradition for designers,
+                  typographers and the like. Some people hate it and argue for
+                  its demise, but others ignore the hate as they create awesome
+                  tools to help create filler text for everyone from bacon lovers
+                  to Charlie Sheen fans. Lorem ipsum represents a long-held tradition for designers, typographers and the like. Some people
+                  hate it and argue for its demise, but others ignore the hate as they create awesome tools to help
+                  create filler text for everyone from bacon lovers to Charlie Sheen fans.
+               
+                </p>
+
+                <a href="#" class="collapsible">
+                  <i class="fas fa-comment-medical mr-2"></i> Answers (5)
+                </a>
+
+                <div class="card-footer card-comments">
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user3-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      It is a long established fact that a reader will be distracted
+                      by the readable content of a page when looking at its layout.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user4-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Alexander Pierce
+                        <span class="text-muted float-right">6:00 PM Today</span>
+                      </span><!-- /.username -->
+                      The point of using Lorem Ipsum is that it hrs a morer-less
+                      normal distribution of letters, as opposed to using
+                      'Content here, content here', making it look like readable English.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user5-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Sarah Bullock
+                        <span class="text-muted float-right">8:03 PM Yesterday</span>
+                      </span><!-- /.username -->
+                      If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                      embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to
+                      repeat predefined chunks as necessary, making this the first true generator on the Internet. It
+                      uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                      to generate Lorem Ipsum which looks reasonable.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user6-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Nora Havisham
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                      classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                      professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                      consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                  <div class="card-comment">
+                    <!-- User image -->
+                    <img class="img-circle img-sm" src="../../../dist/img/user7-128x128.jpg" alt="User Image">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        Elizabeth Pierce
+                        <span class="text-muted float-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                      Lorem ipsum represents a long-held tradition for designers, typographers and the like. Some people
+                      hate it and argue for its demise, but others ignore the hate as they create awesome tools to help
+                      create filler text for everyone from bacon lovers to Charlie Sheen fans.
+                    </div>
+                    <!-- /.comment-text -->
+                  </div>
+                </div>
+
+
+
+                <form class="form-horizontal">
+                  <div class="input-group input-group-sm mb-0">
+                    <input class="form-control form-control-sm" placeholder="Type your answer">
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-success">Answer</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.post -->
+
+             
+
+             
+              <!-- /.post -->
+            </div>
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="../../../plugins/jquery/jquery.min.js"></script>
+  <!-- Summernote -->
+  <script src="../../../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../../dist/js/adminlte.min.js"></script>
+  <!-- Summernote -->
+  <script src="../../../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../../dist/js/demo.js"></script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    $(function () {
+      //Add text editor
+      $("#compose-textarea").summernote();
+    });
+  </script>
+
+</html>

@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Profile</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Theme style -->
+
+  <link rel="stylesheet" href="{% static 'css/adminlte.min.css'%}">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+
+          <div class="navbar-search-block">
+            <form class="form-inline">
+              <!-- <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+
+                  </button>
+                </div>
+              </div> -->
+        <li class="nav-item dropdown mt-0 p-0">
+          <a class="nav-link" href="{% url 'signout' %}">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Log Out</span>
+          </a>
+        </li>
+        </form>
+  </div>
+  </li>
+
+
+  </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="{%static 'img/quoralogo.png'%}" alt="quora Logo" class="brand-image img-circle elevation-3"
+        style="opacity: .8">
+      <span class="brand-text font-weight-light">Quora</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+              <a href="{% url 'student' %}" class="nav-link active">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+              </a>
+             </li>
+          <li class="nav-item">
+            <a href="{% url 'studentprofile' %}" class="nav-link">
+              <i class="fas fa-user"></i>
+              <p>User Profile</p>
+            </a>
+           </li>
+        </ul>
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+
+          
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+
+          </div>
+
+          <div class="card-body">
+            <div class="card jumbotron">
+             
+              <h3 style="margin:auto"><span class="badge badge-pill badge-info">Question & Answer</span></h3> 
+            {% for i in questiondata %}
+         
+              <div class="post clearfix">
+                <div class="user-block">
+                  <img class="img-circle img-bordered-sm" src="{{i.ownerimg}}" alt="User Image">
+                  <span class="username">
+                    <a href="#">{{i.ownername}}</a>
+  
+                  </span>
+                  <span class="description">{{i.postedtime}}</span>
+                </div>
+                <!-- /.user-block -->
+                {{i.question|safe}}
+                <span class="description"><a href="{% url 'answersubmit' pk=i.id fk=i.owner %}"
+                    class="badge badge-pill badge-success">Answer</a></span>
+  
+              </div>
+
+            {% endfor %}
+            </div>
+            <!-- /.post -->
+          </div>
+      
+    </section>
+  </div>
+
+
+
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="{%static 'plugins/jquery/jquery.min.js' %}"></script>
+  <!-- Bootstrap 4 -->
+  <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- AdminLTE App -->
+  <script src="{% static 'js/adminlte.min.js' %}"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="{% static 'js/demo.js' %}"></script>
+
+
+  </div>
+</body>
+
+</html>

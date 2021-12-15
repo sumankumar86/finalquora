@@ -1,0 +1,82 @@
+{% extends 'core\siteBase.html' %}
+{% load static %}
+
+{% block card%}
+<div class="card">
+    <div class="card-header p-2">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="nav nav-pills">
+                <li class="nav-item ">
+                    <a class="nav-link active" href="{% url 'studentprofile' %}"><i class="fas fa-question-circle" style="color:rgb(0, 255, 191)"></i>Question</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addquestion' %}"><i class="fas fa-comment-medical" style="color:rgb(0, 255, 191)" ></i>Add Question</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addcategory' %}"><i class="far fa-plus-square" style="color:rgb(0, 255, 191)"></i> Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'editprofile' %}"><i class="fas fa-user-edit" style="color:rgb(0, 255, 191)"></i>Edit Profile</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+<div class="card-body">
+    <div class="tab-content" style="overflow-y:auto;">
+     <table id="example1" class="table table-bordered table-striped table-hover text-nowrap">
+            <thead>
+                <tr>
+                    <th> Querstion </th>
+                    <th> Category </th>
+                    <th> Date </th>
+                    <th> Status </th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in questiondata %}
+                <tr>
+                    <td>{{i.question|safe}}</td>
+    
+                   
+                    <td>
+                        {% for j in categorydata %}
+                        {% if j.id == i.questioncategory%}
+                        {{j.name}}
+                        {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>{{i.postedtime}}</td>
+                    <td class="project-actions text-center">
+                        {% if i.status %}
+                        <span class="badge bg-success">Approve</span>
+                        {% else %}
+                        <span class="badge bg-warning">Pending</span>
+                        {% endif %}
+                    </td>
+                   
+                </tr>
+                {% endfor %}
+    
+            </tbody>
+        </table>     
+</div>
+</div>
+</div>
+{% endblock card %}
+{% block script %}
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+        });
+    });
+</script>
+{% endblock script %}

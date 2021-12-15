@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quora | CDC </title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../../dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link"  href="login.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Log Out</span>
+                    </a>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+                <!-- <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-comments"></i>
+        <span class="badge badge-danger navbar-badge">3</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <a href="#" class="dropdown-item"> -->
+                <!-- Message Start -->
+                <!-- <div class="media">
+            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Brad Diesel
+                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">Call me whenever you can...</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div> -->
+                <!-- Message End -->
+                <!-- </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item"> -->
+                <!-- Message Start -->
+                <!-- <div class="media">
+            <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                John Pierce
+                <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">I got your message bro</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div> -->
+                <!-- Message End -->
+                <!-- </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item"> -->
+                <!-- Message Start -->
+                <!-- <div class="media">
+            <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Nora Silvester
+                <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">The subject goes here</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div> -->
+                <!-- Message End -->
+                <!-- </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+      </div>
+    </li>  -->
+                <!-- Notifications Dropdown Menu -->
+                <!-- <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-bell"></i>
+        <span class="badge badge-warning navbar-badge">15</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <span class="dropdown-item dropdown-header">15 Notifications</span>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-envelope mr-2"></i> 4 new messages
+          <span class="float-right text-muted text-sm">3 mins</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-users mr-2"></i> 8 friend requests
+          <span class="float-right text-muted text-sm">12 hours</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-file mr-2"></i> 3 new reports
+          <span class="float-right text-muted text-sm">2 days</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+      </div>
+    </li> -->
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <img src="../../../dist/img/quoralogo.png" alt="Quora Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: 0.8" />
+                <span class="brand-text font-weight-light">Quora</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="cdcactivity.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Activity
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                   Question Category
+                                    <i class="fas fa-angle-left right"></i>
+
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="visit_category.html" class="nav-link">
+                                        <i class="fas fa-car-battery"></i>
+                                        <p>Circuit Theory</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="visit_category.html" class="nav-link">
+                                        <i class="fas fa-wave-square"></i>
+                                        <p>Signal & System</p>
+                                    </a>
+                                </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-cog"></i>
+                                <p>Electric Machine</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-bolt"></i>
+                                <p>Measurement</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-plug"></i>
+                                <p>Control System</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Power System</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-charging-station"></i>
+                                <p>Power Electronics</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-bolt"></i>
+                                <p>Electric Drive</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-solar-panel"></i>
+                                <p>Renewable Energy</p>
+                            </a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="visit_category.html" class="nav-link">
+                                <i class="fas fa-bolt"></i>
+                                <p>HVDC Transmission</p>
+                            </a>
+                        </li>
+                    </ul>
+                    </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Dashboard</h1>
+                        </div>
+                       
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Info boxes -->
+                    <div class="row">
+                        <div class="col-12 col-sm-7 col-md-4">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-info elevation-1"><img
+                                        src="../../../dist/img/light-bulb.png"></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Electrical Engineering</span>
+                                    <span class="info-box-number">
+                                        150
+
+                                    </span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-sm-7 col-md-4">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-danger elevation-1"><img
+                                        src="../../../dist/img/mechanics.png"></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Mechanical Engineering</span>
+                                    <span class="info-box-number">170</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+
+                        <!-- fix for small devices only -->
+                        <div class="clearfix hidden-md-up"></div>
+
+                        <div class="col-12 col-sm-7 col-md-4">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-success elevation-1"><img
+                                        src="../../../dist/img/civil-engineering.png"></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Civil Engineering</span>
+                                    <span class="info-box-number">75</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-sm-7 col-md-4">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-warning elevation-1"><img
+                                        src="../../../dist/img/science.png"></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Computer Science & Engineering</span>
+                                    <span class="info-box-number">200</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-sm-7 col-md-4">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-secondary elevation-1"><img
+                                        src="../../../dist/img/website.png"></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Electronics & Communication </span>
+                                    <span class="info-box-number">150</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 col-sm-7 col-md-4">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-info elevation-1"><img
+                                        src="../../../dist/img/online-pharmacy.png"></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Pharmacy</span>
+                                    <span class="info-box-number">200</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <!--/. container-fluid -->
+            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header p-2">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item"><a class="nav-link active" href="#question"
+                                            data-toggle="tab">Question</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#addquestion"
+                                            data-toggle="tab">Category Request</a></li>
+
+                                </ul>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body" >
+                                <div class="tab-content">
+                                    <div class="active tab-pane" id="question">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                  
+                                                    <th>Image</th>
+                                                  
+                                                    <th>Year</th>
+                                                    <th>Dept</th>
+                                                    <th>Question</th>
+                                                    <th> date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Aadit Narayan</td>
+                                                  
+                                                    <td>
+                                                     <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user1-128x128.jpg"
+                                                        height="50" width="50">
+                                                     </a>   
+                                                       </td>
+                                                    <td>4th</td>
+                                                   
+                                                    <td>EE</td>
+                                                    <td>What is Rotor and Stator?</td>
+                                                    <td>12/08/2021</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="questionvisit.html">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aarav Sengupta</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user2-160x160.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>3rd</td>
+                                                   
+                                                    <td>EE</td>
+                                                    <td>What is Armature Reaction?</td>
+                                                    <td>18/09/2021</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vivan Sengupta</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user8-128x128.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>2nd</td>
+                                                   
+                                                    <td>CSE</td>
+                                                    <td>What is call by reference and call by value in functions?</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rahul Naskar</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user2-160x160.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+
+                                                        </td>
+                                                    <td>3rd</td>
+                                                   
+                                                    <td>EE</td>
+                                                    <td>Define the formula of string efficency.</td>
+                                                    <td>12/08/2021</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Binita Panday</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user5-128x128.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>3rd</td>
+                                                   
+                                                    <td>ME</td>
+                                                    <td>Define Moment of Inertia and Center of Gravity.</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavna Joshi</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user7-128x128.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>4th</td>
+                                                   
+                                                    <td>CE</td>
+                                                    <td>Describe the various types of slump test indications.</td>
+                                                    <td>25/07/2021</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sujan Das</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user6-128x128.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>4th</td>
+                                                   
+                                                    <td>ECE</td>
+                                                    <td>Explain the concept of frequency re-use?</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rani Mukherjee</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user4-128x128.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>3rd</td>
+                                                   
+                                                    <td>ME</td>
+                                                    <td>Can you describe what a projection line is?</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Suman Kumar Ghosh</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/myself.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>3rd</td>
+                                                   
+                                                    <td>EE</td>
+                                                    <td>What is Rotor and Stator</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Debasish</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user2-160x160.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>4th</td>
+                                                   
+                                                    <td>EE</td>
+                                                    <td>What is Rotor and Stator</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Debasish</td>
+                                                  
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar" src="../../../dist/img/user2-160x160.jpg"
+                                                            height="50" width="50">
+                                                        </a>
+                                                        </td>
+                                                    <td>4th</td>
+                                                   
+                                                    <td>EE</td>
+                                                    <td>What is Rotor and Stator</td>
+                                                    <td>2/06/23</td>
+                                                    <td class="project-actions text-right">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>     
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane" id="addquestion">
+
+                                        <table id="example3" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Image</th>
+                                                    <th>Year</th>
+
+                                                    <th>Dept</th>
+                                                    <th>Category Name</th>
+                                                    <th>Category Details</th>
+                                                    <th> Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Suman Kumar Ghosh</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/myself.jpg" height="50" width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>3rd</td>
+                                                    <td>EE</td>
+                                                    <td>Autocad</td>
+                                                    <td>Autocad is very important as Electrical Engineer</td>
+                                                    <td>18/09/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Olivia Sarma</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user3-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>CSE</td>
+                                                    <td>Python</td>
+                                                    <td>Python is very important as Software Engineer</td>
+                                                    <td>01/09/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Puloma Mitra</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user5-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>3rd</td>
+                                                    <td>ME</td>
+                                                    <td>Engineering Mechanics</td>
+                                                    <td>It is a important Subject for Mechanical Student</td>
+                                                    <td>05/07/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rahul Naskar</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user2-160x160.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>EE</td>
+                                                    <td>Analog Electronics</td>
+                                                    <td>Analog Electronics is a important topic</td>
+                                                    <td>10/09/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Atanu Manna</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user8-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>3rd</td>
+                                                    <td>EE</td>
+                                                    <td>GATE Preparation</td>
+                                                    <td>It will be helpful for our future</td>
+                                                    <td>15/08/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sujan Das</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user6-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>4th</td>
+                                                    <td>ECE</td>
+                                                    <td>Digital System</td>
+                                                    <td>Digital System is one of the important topic in modern
+                                                        communication era</td>
+                                                    <td>12/09/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Advika Padukone</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user5-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>CSE</td>
+                                                    <td>Python</td>
+                                                    <td>We can use Python for developing websites and web applications</td>
+                                                    <td>01/09/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maria Gonzales</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user3-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>CSE</td>
+                                                    <td>Python</td>
+                                                    <td>Python is very important as Software Engineer</td>
+                                                    <td>25/08/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aadhya Sen</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user7-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>1st</td>
+                                                    <td>CSE</td>
+                                                    <td>Artificial Inteligence</td>
+                                                    <td>Artificial Inteligence is an important Category</td>
+                                                    <td>09/06/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavna Joshi</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user4-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>ECE</td>
+                                                    <td>Data Structure</td>
+                                                    <td>Data Structure will be helpful for us to get a job in IT Sector</td>
+                                                    <td>11/05/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aarav Sengupta</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user1-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>EE</td>
+                                                    <td>MATLAB</td>
+                                                    <td>I think it will be helful in our future life</td>
+                                                    <td>16/09/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aarna Vanushali</td>
+
+                                                    <td>
+                                                        <a href="viewprofile.html">
+                                                        <img alt="Avatar" class="table-avatar"
+                                                            src="../../../dist/img/user7-128x128.jpg" height="50"
+                                                            width="50">
+                                                        </a>
+                                                        </td>
+
+                                                    <td>2nd</td>
+                                                    <td>ECE</td>
+                                                    <td>Microprosesor</td>
+                                                    <td>Microprosesor is essential subject in our modern era </td>
+                                                    <td>25/08/2021</td>
+                                                    <td class="project-actions text-center">
+                                                        <a class="btn btn-primary btn-sm" href="#">
+                                                            <i class="fas fa-folder">
+                                                            </i>
+                                                            View
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm" href="#">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="../../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+
+    <script src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+
+    <script src="../../../dist/js/adminlte.js"></script>
+
+    <!-- PAGE PLUGINS -->
+    <!-- jQuery Mapael -->
+    <script src="../../../plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="../../../plugins/raphael/raphael.min.js"></script>
+    <script src="../../../plugins/jquery-mapael/jquery.mapael.min.js"></script>
+
+    <script src="../../../plugins/datatables/jquery.dataTables.js"></script>
+    <script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <!-- ChartJS -->
+    <script src="../../../plugins/chart.js/Chart.min.js"></script>
+
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../../dist/js/demo.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="../../../dist/js/pages/dashboard2.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+            });
+        });
+        $(function () {
+            $("#example3").DataTable();
+            $('#example4').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+            });
+        });
+    </script>
+</body>
+
+</html>

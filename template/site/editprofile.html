@@ -1,0 +1,218 @@
+{% extends 'core\siteBase.html' %}
+{% load static %}
+
+{% block card%}
+<div class="card">
+    <div class="card-header p-2">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="nav nav-pills">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'studentprofile' %}"><i class="fas fa-question-circle" style="color:rgb(0, 255, 191)"></i>Question</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addquestion' %}"><i class="fas fa-comment-medical" style="color:rgb(0, 255, 191)" ></i>Add Question</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addcategory' %}"><i class="far fa-plus-square" style="color:rgb(0, 255, 191)"></i> Add Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'editprofile' %}"><i class="fas fa-user-edit" style="color:rgb(0, 255, 191)"></i>Edit Profile</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="card-body p-4">
+            <!-- <div class="card-header mb-4">
+                <b>Edit Personal Details</b>
+            </div> -->
+            <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label"> First
+                        Name</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.first_name}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Last
+                        Name</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.last_name}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.username}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.email}}
+                    </div>
+                </div>
+
+
+               
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Registration
+                        ID</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.enrollment}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Department</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.dept}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Semester</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.semester}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Year</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.year}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Education</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.education}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Location</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.address}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Skills</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.skill}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Hobby</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.hobby}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.password1}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Confirm
+                        Password</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.password2}}
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputSkills" class="col-sm-2 col-form-label">Profile
+                        Pic
+                        Preview</label>
+                    <div class="col-sm-4">
+                        <label for="customFile">
+                            
+                            <img class="profile-user-img img-fluid img-circle" id='previewpic'
+                                src="{{StudentData.profilepic.url}}" alt="User profile picture">
+                        </label>
+                    </div>
+                    {{UserProfileForm.profilepic}}
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-5 col-sm-12">
+                        <button type="submit" class="btn btn-success">Update your Profile</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+            <!-- <div class="card card-default mt-6">
+            <div class="card-header">
+                <h3 class="card-title">Change Password</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                        title="Collapse">
+                        <i class="far fa-minus-square"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-4">
+                <div class="form-group row">
+                    <label for="Old Password" class="col-sm-3 col-form-label">Old
+                        Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="password"
+                            placeholder="Old Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="New Password" class="col-sm-3 col-form-label">New
+                        Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="new_password"
+                            placeholder="Create New Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="confirm Password" class="col-sm-3 col-form-label">Confirm
+                        Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="confirm_password"
+                            placeholder=" Retype the password" onkeyup="fun()">
+
+
+                        <p id="demo"></p>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-5 col-sm-10">
+                        <button type="submit" class="btn btn-success">Change
+                            Password</button>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+    </div>
+</div>
+{% endblock card%}
+
+{% block script%}
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#previewpic')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+{% endblock script%}

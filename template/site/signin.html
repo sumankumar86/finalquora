@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quora</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css'%}" />
+</head>
+
+<body>
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <div class="brand_logo_container">
+            <img
+              src="https://w7.pngwing.com/pngs/181/1009/png-transparent-letter-q-logo-area-text-symbol-brand-computer-quora-text-simple-trademark-thumbnail.png"
+              class="brand_logo" alt="Logo" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center form_container">
+          <form action="" method="POST">
+            {% csrf_token %}
+
+            <div class="input-group mt-2 mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <!-- {{form.username}} -->
+              <input type="text" name="username" class="form-control input_user" value="" placeholder="username"
+                required />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+
+              <input type="password" name="password" class="form-control input_pass" value="" placeholder="password"
+                required />
+
+              <!-- {{form.password}} -->
+            </div>
+            <!-- <div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Remember me</label>
+							</div>
+						</div>
+				 -->
+
+            <div class="d-flex justify-content-center mt-4 login_container">
+              <button type="submit" name="button" class="btn login_btn" data-toggle="modal"
+                data-target="#modal-primary">
+                Login
+              </button>
+            </div>
+            <!-- <div class="modal fade" id="modal-primary">
+								<div class="modal-dialog">
+								  <div class="modal-content bg-primary">
+									<div class="modal-header">
+									  <h4 class="modal-title">Primary Modal</h4>
+									  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
+									<div class="modal-body">
+									  <p>One fine body</p>
+									</div>
+									<div class="modal-footer justify-content-between">
+									  <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+									  <button type="button" class="btn btn-outline-light">Save changes</button>
+									</div>
+								  </div>
+								 
+								</div>
+							  </div> -->
+            <!-- /.modal -->
+          </form>
+        </div>
+
+        <div class="mt-5 mb-2">
+          <div class="d-flex justify-content-center links">
+            Don't have an account?
+            <a href="{% url 'signup'%}" class="ml-2">Sign Up</a>
+          </div>
+          <div class="d-flex justify-content-center links">
+            <a href="{% url 'forgetpassword'%}">Forgot your password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Alertify JavaScript -->
+
+  <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+  <!-- Bootstrap 4 -->
+  <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Toastr -->
+  <script src="{% static 'plugins/toastr/toastr.min.js'%}"></script>
+
+  {% if messages %}
+
+  {% for message in messages %}
+
+  {% if message.tags == 'success'%}
+  <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+  {% elif message.tags == 'info' %}
+  <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+  {% elif message.tags == 'warning' %}
+  <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+  {% elif message.tags == 'error' %}
+  <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+  {% endif %}
+
+
+  {% endfor %}
+
+  {% endif %}
+
+  {% if form.errors %}
+  <script type=text/javascript>toastr.error('{{ form.errors|escape }}')</script>
+  {% endif %}
+
+</body>
+
+</html>
